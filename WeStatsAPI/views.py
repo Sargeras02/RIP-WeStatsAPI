@@ -27,6 +27,7 @@ from django.views.decorators.csrf import csrf_exempt
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
 from django.utils import timezone
+from datetime import timedelta
 
 from .parameters import (CookieParameter, RoleParameter, PicParameter, FilterParameter)
 
@@ -113,7 +114,8 @@ def login_view(request):
 
     if user is not None:
         random_key = uuid.uuid4()
-        session_storage.set(str(random_key), email)
+        expiration_time = timedelta(days=2)
+        session_storage.set(str(random_key), email, ex=int(expiration_time.total_seconds()))
         response = HttpResponse("{'status': 'ok'}")
         response.set_cookie("session_id", random_key)
         return response

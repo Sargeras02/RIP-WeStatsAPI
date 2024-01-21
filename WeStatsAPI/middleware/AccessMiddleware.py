@@ -7,6 +7,7 @@ import re
 
 
 EXCLUDED_PATHS = {
+    'users/': ['POST'],
     '/login': ['ANY'],
     '/stations': ['GET'],
     re.compile(r'^/stations/\d+'): ['GET'],
@@ -42,7 +43,7 @@ ROLES_PERMISSIONS = {
         re.compile(r'^/stations/\d+'): ['ANY'],
         '/measurements': ['GET', 'POST'],
         re.compile(r'^/measurements/\d+'): ['ANY'],
-        '/users': ['ANY'],
+        '/users/': ['ANY'],
 
         '/orders': ['ANY'],
         re.compile(r'^/orders/\d+'): ['ANY'],
