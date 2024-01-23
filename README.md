@@ -8,8 +8,18 @@
 
 1. Frontend: https://github.com/Sargeras02/RIP-WeStatsApp
 
+   Веб-Приложение для просмотра станций, заказа измерений, управления данными и пользователями, разграничивающее функционал для ползователей разных ролей.
+
 2. Backend: https://github.com/Sargeras02/RIP-WeStatsAPI
+
+   Веб-Сервис для хранения, обработки и управления данными.
 
 3. Mobile: https://github.com/Sargeras02/Rip-WeStatsMobile
 
+   Мобильное приложение для просмотра списка станций-партнёров.
+
 4. Async Payments: https://github.com/Sargeras02/Rip-WeStatsAsync
+
+   Выделенный сервис оплаты заказов.
+
+5. Pages: https://sargeras02.github.io/RIP-WeStatsApp/   
