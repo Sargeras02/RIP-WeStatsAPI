@@ -16,6 +16,7 @@ EXCLUDED_PATHS = {
     re.compile(r'^/measurements/\d+'): ['GET'],
     '/swagger/': ['ANY'],
     '/measurements': ['GET', 'POST'],
+    '/logout': ['ANY'],
 }
 
 
@@ -56,7 +57,6 @@ ROLES_PERMISSIONS = {
     },
 }
 COMMON_PERMISSIONS = {
-    '/logout': ['ANY'],
     '/profile': ['GET'],
     '/userorders': ['GET'],
     '/userorders/current': ['GET'],

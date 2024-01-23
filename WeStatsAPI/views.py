@@ -38,10 +38,14 @@ from django.db.models import Q
 from django.conf import settings
 import uuid
 import redis
-# sudo service redis-server start
+
+# wsl > sudo service redis-server start
+# redis-cli KEYS *
+# PowerShell > PS C:\Users\Sargeras\Downloads> .\minio.exe server C:\minio --console-address :9001
 
 # Redis
 session_storage = redis.StrictRedis(host=settings.REDIS_HOST, port=settings.REDIS_PORT)
+
 
 # Custom decorator для permission/def
 # OBSOLETE
