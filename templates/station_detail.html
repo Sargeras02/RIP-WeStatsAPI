@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Информация о метеостанции{% endblock %}
+
+{% block content %}
+<h1>Информация о метеостанции №{{ data.id }}</h1>
+<p>Дополнительная информация о станции: координаты, описание и т.д.</p>
+<!-- Дополнительные данные о станции -->
+
+<!-- <h2>Заявки на {{ station.name }}</h2>
+<ul>
+    {% for registration in station.registrations.all %}
+        <li>{{ registration.date }}: {{ registration.temperature }}</li>
+    {% empty %}
+        <li>Нет зарегистрированных данных</li>
+    {% endfor %}
+</ul> -->
+<p><a href="{% url 'stations_list' %}"><< Назад</a></p>
+{% endblock %}

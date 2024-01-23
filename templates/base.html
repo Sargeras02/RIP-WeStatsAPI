@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/examp.css' %}">
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    Лабораторная №1. ИУ5-55Б, Костин.
+    {% block content %}{% endblock %}
+</body>
+</html>

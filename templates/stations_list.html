@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Список метеостанций{% endblock %}
+
+{% block content %}
+<h1>Список метеостанций Москвы</h1>
+<p>Поиск по id: </p>
+<form action="{% url 'searchById' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input name="id" type="text"><br><br>
+    <input type="submit" value="Submit" >
+</form>
+<ul>
+    {% for station in data.stations %}
+        <li><a href="{% url 'station_detail' station.id %}">{{ station.name }}</a></li>
+    {% empty %}
+        <li>Нет доступных метеостанций</li>
+    {% endfor %}
+</ul>
+{% endblock %}
